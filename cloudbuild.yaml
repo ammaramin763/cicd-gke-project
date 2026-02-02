@@ -35,12 +35,12 @@ steps:
     gcloud deploy releases create 'app1-release-${SHORT_SHA}'
     --delivery-pipeline=gke-cicd-pipeline
     --region=us-central1
-    --source=./kubernetes/app1.yaml
+    --from-k8s-manifest=./kubernetes/app1.yaml
 
      gcloud deploy releases create 'app2-release-${SHORT_SHA}'
     --delivery-pipeline=gke-cicd-pipeline
     --region=us-central1
-    --source=./kubernetes/app2.yaml
+    --from-k8s-manifest=./kubernetes/app2.yaml
 
 
 
